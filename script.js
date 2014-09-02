@@ -6,18 +6,32 @@ var edm;
 
 edm = {
     "id": "36_SG",
-    "title": "",
-    "subject": "",
+    "title": "Hurry! Bid For A Rolex, Omega & MORE",
+    "subject": "Mid-Autumn Sale Up to 85% Discount! ",
     "limited": "http://media.4at5.net/email_domains/ebay/160602/limitedtime.jpg",
     "banner": "http://imgur.com/brTNFwN.jpg?1",
     "country": "SG",
     "images": "",
     "more": false,
     "map": {
-        origin: [0, 0, 126, 49, 129, 0, 223, 49, 226, 0, 404, 49, 406, 0, 544, 49, 548, 0, 677, 49]
+        origin: [0, 0, 129, 48, 132, 0, 250, 48, 253, 0, 360, 48, 362, 0, 469, 48, 473, 0, 679, 48],
+        href: ["http://rover.ebay.com/rover/1/3423-163426-1499-29/4?keyword=CategWatchesWk36LapseBuyer&mpre=http%3A%2F%2Fwww.ebay.com.sg%2Fsch%2FWatches-%2F14324%2Fi.html%3F_from%3DR40%26LH_Auction%3D1%26_nkw%3DWatch%2B%2528Rolex%252C%2BOmega%252C%2Bbreitling%252C%2Blongines%252C%2BTag%2BHeuer%252C%2BPanerai%252C%2BIWC%252C%2Boris%2B%2529%26LH_PrefLoc%3D2%26_sop%3D12%0A", "http://rover.ebay.com/rover/1/3423-163426-1499-29/4?keyword=CategFashionWk36LapseBuyer&mpre=http%3A%2F%2Fwww.ebay.com.sg%2Fsch%2FWomens-Handbags-Bags-%2F169291%2Fi.html%3F_udlo%3D300%26LH_BIN%3D1%26_from%3DR40%26LH_ItemCondition%3D3000%26_nkw%3D%2528Chanel%252C%2Bvuitton%252C%2Bceline%252C%2Bhermes%252C%2Bdior%252C%2Bgucci%252C%2Bprada%252C%2Bbalenciaga%252C%2Bchloe%2529%2Bbag%26_sop%3D12%0A", "http://rover.ebay.com/rover/1/3423-163426-1499-29/4?keyword=CategSportsWk36LapseBuyer&mpre=http%3A%2F%2Fwww.ebay.com.sg%2Fsch%2Ftaskermania-sg%2Fm.html%3F_sop%3D12%26_armrs%3D1%26_sacat%3D0%26_from%3DR40%26LH_BIN%3D1%26_nkw%3DAdidas%26%3D%26rt%3Dnc%26LH_ItemCondition%3D3%0A", "http://rover.ebay.com/rover/1/3423-163426-1499-29/4?keyword=CategKitchenWk36LapseBuyer&mpre=http%3A%2F%2Fwww.ebay.com.sg%2Fsch%2FKitchen-Dining-Bar-%2F20625%2Fi.html%3FLH_ItemCondition%3D3%26_from%3DR40%26LH_BIN%3D1%26_nkw%3Dhello%2Bkitty%2B-disney%26LH_PrefLoc%3D2%26rt%3Dnc%0A", "http://rover.ebay.com/rover/1/3423-163426-1499-29/4?keyword=CategHomeDecoWk36LapseBuyer&mpre=http%3A%2F%2Fwww.ebay.com.sg%2Fsch%2FHolidays-Cards-Parties-%2F16086%2Fi.html%3FLH_BIN%3D1%26_sop%3D12%26_from%3DR40%26_udhi%3D25%26_nkw%3D%2528lantern%252C%2Bfairy%2Bberries%252C%2Bprojector%252C%2BLED%252C%2Billoom%252C%2Bglow%2529%2B-halloween%2B-mug%2B-memorial%2B-santa%26rt%3Dnc%0A"]
     }
 };
 
+// edm = {
+//     "id": "36_SG",
+//     "title": "",
+//     "subject": "",
+//     "limited": "http://media.4at5.net/email_domains/ebay/160602/limitedtime.jpg",
+//     "banner": "http://imgur.com/brTNFwN.jpg?1",
+//     "country": "SG",
+//     "images": "",
+//     "more": false,
+//     "map": {
+//         origin: [0, 0, 126, 49, 129, 0, 223, 49, 226, 0, 404, 49, 406, 0, 544, 49, 548, 0, 677, 49]
+//     }
+// };
 
 // edm = {
 //     "id": "35_SG",
@@ -32,8 +46,6 @@ edm = {
 //         origin: [0,0,126,49,129,0,223,49,226,0,404,49,406,0,544,49,548,0,677,49]
 //     } 
 // };
-
-// edm.map.big = _.map(edm.map.origin, function(e){return Math.floor(e* 350/680)})
 
 // edm = {
 //     "id": "35_MY",
@@ -85,6 +97,14 @@ var countries = {
         paypal: "https://www.paypal.com/ph/webapps/mpp/paypal-buyer-protection"
     }
 };
+
+
+edm.map.big = _.map(edm.map.origin, function(e) {
+    return Math.floor(e * 644 / 680)
+})
+edm.map.small = _.map(edm.map.origin, function(e) {
+    return Math.floor(e * 350 / 680)
+})
 
 edm = _.extend(edm, countries[edm.country]);
 edm.sections = _.map(sections, function(section) {
