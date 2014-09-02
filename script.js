@@ -37,20 +37,6 @@ edm = {
 };
 
 // edm = {
-//     "id": "36_SG",
-//     "title": "",
-//     "subject": "",
-//     "limited": "http://media.4at5.net/email_domains/ebay/160602/limitedtime.jpg",
-//     "banner": "http://imgur.com/brTNFwN.jpg?1",
-//     "country": "SG",
-//     "images": "",
-//     "more": false,
-//     "map": {
-//         origin: [0, 0, 126, 49, 129, 0, 223, 49, 226, 0, 404, 49, 406, 0, 544, 49, 548, 0, 677, 49]
-//     }
-// };
-
-// edm = {
 //     "id": "35_SG",
 //     "title": "Mid-Autumn Sale: Hello Kitty Baking Essentials",
 //     "subject": "Mid-Autumn Sale: Hello Kitty Baking Essentials",
@@ -68,9 +54,7 @@ edm = {
 //     "id": "35_MY",
 //     "title":"Great Style Savings – From RM39! Grab Deals On Sexy Lingerie, Oakley, Thunderbird Watches & More!",
 //     "subject": "Great Style Savings – From RM39! Grab Deals On Sexy Lingerie, Oakley, Thunderbird Watches & More!",
-//     // "limited": "http://media.4at5.net/email_domains/ebay/160602/limitedtime.jpg",
 //     "limited": "http://www.ebaypowerhouse.com/portal/edm/images/2014/wk32_20140728/sg/yesmail/limitedtime.jpg",
-//     "banner": false,
 //     "country": "MY",
 //     "images": "",
 //     "more": "http://ebaypowerhouse.com/portal/edm/images/2014/wk35_20140818/my/yesmail/more_btn.jpg"
@@ -137,8 +121,8 @@ edm.sections = _.map(sections, function(section) {
     return section;
 });
 
-edm.banner = edm.images + edm.banner;
-edm.limited = edm.images + edm.limited;
+if (edm.banner) edm.banner = edm.images + edm.banner;
+if (edm.limited) edm.limited = edm.images + edm.limited;
 
 _.each(edm.sections, function(section) {
     section.rows = [];
