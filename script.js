@@ -6,12 +6,12 @@ var edm;
 
 edm = {
     "id": "36_SG",
+    "country": "SG",
     "title": "Hurry! Bid For A Rolex, Omega & MORE",
     "subject": "Mid-Autumn Sale Up to 85% Discount! ",
-    "limited": "http://media.4at5.net/email_domains/ebay/160602/limitedtime.jpg",
-    "banner": "http://ebaypowerhouse.com/portal/edm/images/2014_yesmail/wk36lapsebuyer/sg/",
-    "country": "SG",
-    "images": "",
+    "limited": "sg_lapsebuyer_w36_07.jpg",
+    "banner": "banner.jpg",
+    "images": "http://ebaypowerhouse.com/portal/edm/images/2014_yesmail/wk36lapsebuyer/sg/",
     "more": false,
     "map": [{
         "href": "http://rover.ebay.com/rover/1/3423-163426-1499-29/4?keyword=CategWatchesWk36LapseBuyer&mpre=http%3A%2F%2Fwww.ebay.com.sg%2Fsch%2FWatches-%2F14324%2Fi.html%3F_from%3DR40%26LH_Auction%3D1%26_nkw%3DWatch%2B%2528Rolex%252C%2BOmega%252C%2Bbreitling%252C%2Blongines%252C%2BTag%2BHeuer%252C%2BPanerai%252C%2BIWC%252C%2Boris%2B%2529%26LH_PrefLoc%3D2%26_sop%3D12%0A",
@@ -116,12 +116,13 @@ var countries = {
 };
 
 edm.map = _.map(edm.map, function(button) {
-    button.big = _.map(button.origin, function(e) {
-        return Math.floor(e * 644 / 680)
-    }).join(',');
+    // button.big = _.map(button.origin, function(e) {
+    //     return Math.floor(e * 644 / 680)
+    // }).join(',');
+    button.big = button.origin.join(',');
 
     button.small = _.map(button.origin, function(e) {
-        return Math.floor(e * 350 / 680)
+        return Math.floor(e * 380 / 680)
     }).join(',');
 
     return button;
@@ -136,15 +137,22 @@ edm.sections = _.map(sections, function(section) {
     return section;
 });
 
+edm.banner = edm.images + edm.banner;
+edm.limited = edm.images + edm.limited;
+
 _.each(edm.sections, function(section) {
     section.rows = [];
     section.src = edm.images + section.src;
     _.each(section.products, function(p1, index) {
-
         if (index % 2 === 0) {
             p1.src = edm.images + p1.src;
-            p2.src = edm.images + p2.src;
+
             p2 = section.products[index + 1];
+            if (p2) {
+                p2.src = edm.images + p2.src;
+            } else {
+                console.error("Wrong number of products");
+            }
 
             section.rows.push({
                 left: p1,
@@ -152,6 +160,11 @@ _.each(edm.sections, function(section) {
             });
         }
     });
+
+    if (section.rows.length == 0) {
+        console.log("not section");
+        delete(section.rows);
+    }
 });
 
 mu.root = __dirname + '/';
