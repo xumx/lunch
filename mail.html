@@ -705,6 +705,30 @@
             max-height: none !important;
         }
     }
+    @media only screen and (max-width: 400px) {
+        *[desktop] {
+            overflow: hidden;
+            float: left;
+            display: none;
+            line-height: 0px;
+            width: 0;
+            height: 0;
+            max-height: 0px;
+        }
+        *[mobile] {
+            overflow: hidden;
+            float: left;
+            display: none;
+            line-height: 0px;
+            width: 0;
+            height: 0;
+            max-height: 0px;
+        }
+        *[smaller] {
+            display: block !important;
+            max-height: none !important;
+        }
+    }
     </style>
 </head>
 
@@ -787,6 +811,7 @@
                                                                         <td align="center" class="mcnImageContent" valign="top">
                                                                             <div desktop><img src="{{banner}}" alt="category tag" width="680" usemap="#Map" class="mcnImage" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" align="middle"></div>
                                                                             <div mobile style="mso-hide:all;display:none;max-height:0px;overflow:hidden;"><img src="{{banner}}" alt="category tag" usemap="#MapSmall" class="mcnImage" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" align="middle"></div>
+                                                                            <div smaller style="mso-hide:all;display:none;max-height:0px;overflow:hidden;"><img src="{{banner}}" alt="category tag" usemap="#MapSmaller" class="mcnImage" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" align="middle"></div>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -1128,6 +1153,12 @@
         {{#map}}
         <area shape="rect" coords="{{small}}" target="_blank" href="{{href}}" alt="{{title}}" />{{/map}}
     </map>
+
+    <map id="MapSmaller" name="MapSmaller">
+        {{#map}}
+        <area shape="rect" coords="{{smaller}}" target="_blank" href="{{href}}" alt="{{title}}" />{{/map}}
+    </map>
+
     {{/banner}}
 </body>
 

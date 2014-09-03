@@ -705,6 +705,30 @@
             max-height: none !important;
         }
     }
+    @media only screen and (max-width: 400px) {
+        *[desktop] {
+            overflow: hidden;
+            float: left;
+            display: none;
+            line-height: 0px;
+            width: 0;
+            height: 0;
+            max-height: 0px;
+        }
+        *[mobile] {
+            overflow: hidden;
+            float: left;
+            display: none;
+            line-height: 0px;
+            width: 0;
+            height: 0;
+            max-height: 0px;
+        }
+        *[smaller] {
+            display: block !important;
+            max-height: none !important;
+        }
+    }
     </style>
 </head>
 
