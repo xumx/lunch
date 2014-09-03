@@ -106,6 +106,10 @@ edm.map = _.map(edm.map, function(button) {
     button.big = button.origin.join(',');
 
     button.small = _.map(button.origin, function(e) {
+        return Math.floor(e * 460 / 680)
+    }).join(',');
+
+    button.smaller = _.map(button.origin, function(e) {
         return Math.floor(e * 380 / 680)
     }).join(',');
 
