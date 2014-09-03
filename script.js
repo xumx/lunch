@@ -1,75 +1,17 @@
+var id = process.argv[2];
 var fs = require('fs');
 var _ = require('underscore');
 var mu = require('mu2');
 
-var edm;
+if (!id) {
+    console.log("Please include a email ID");
+    return false;
+}
 
-// edm = {
-//     "id": "36_MY",
-//     "country": "MY",
-//     "title": "Scorching HOT DEALS From RM28! Archery Accessories, LEGO Superheroes, CASIO & more!",
-//     "subject": "Scorching HOT DEALS From RM28! Archery Accessories, LEGO Superheroes, CASIO & more!",
-//     "images": "http://www.ebaypowerhouse.com/portal/edm/images/2014/wk36_20140828/my_thu_wk36/"
-// };
+var edm = require('./' + id + '/edm.json');
+var sections = require('./' + id + '/sections.json');
+var products = require('./' + id + '/products.json');
 
-edm = {
-    "id": "36_SG",
-    "country": "SG",
-    "title": "Hurry! Bid For A Rolex, Omega & MORE",
-    "subject": "Mid-Autumn Sale Up to 85% Discount! ",
-    "limited": "sg_lapsebuyer_w36_07.jpg",
-    "banner": "banner.jpg",
-    "images": "http://ebaypowerhouse.com/portal/edm/images/2014_yesmail/wk36lapsebuyer/sg/",
-    "more": false,
-    "map": [{
-        "href": "http://rover.ebay.com/rover/1/3423-163426-1499-29/4?keyword=CategWatchesWk36LapseBuyer&mpre=http%3A%2F%2Fwww.ebay.com.sg%2Fsch%2FWatches-%2F14324%2Fi.html%3F_from%3DR40%26LH_Auction%3D1%26_nkw%3DWatch%2B%2528Rolex%252C%2BOmega%252C%2Bbreitling%252C%2Blongines%252C%2BTag%2BHeuer%252C%2BPanerai%252C%2BIWC%252C%2Boris%2B%2529%26LH_PrefLoc%3D2%26_sop%3D12%0A",
-        "origin": [0, 0, 129, 48],
-        "title": "Watches"
-    }, {
-        "href": "http://rover.ebay.com/rover/1/3423-163426-1499-29/4?keyword=CategFashionWk36LapseBuyer&mpre=http%3A%2F%2Fwww.ebay.com.sg%2Fsch%2FWomens-Handbags-Bags-%2F169291%2Fi.html%3F_udlo%3D300%26LH_BIN%3D1%26_from%3DR40%26LH_ItemCondition%3D3000%26_nkw%3D%2528Chanel%252C%2Bvuitton%252C%2Bceline%252C%2Bhermes%252C%2Bdior%252C%2Bgucci%252C%2Bprada%252C%2Bbalenciaga%252C%2Bchloe%2529%2Bbag%26_sop%3D12%0A",
-        "origin": [132, 0, 250, 48],
-        "title": "Fashion"
-    }, {
-        "href": "http://rover.ebay.com/rover/1/3423-163426-1499-29/4?keyword=CategSportsWk36LapseBuyer&mpre=http%3A%2F%2Fwww.ebay.com.sg%2Fsch%2Ftaskermania-sg%2Fm.html%3F_sop%3D12%26_armrs%3D1%26_sacat%3D0%26_from%3DR40%26LH_BIN%3D1%26_nkw%3DAdidas%26%3D%26rt%3Dnc%26LH_ItemCondition%3D3%0A",
-        "origin": [253, 0, 360, 48],
-        "title": "Sports"
-    }, {
-        "href": "http://rover.ebay.com/rover/1/3423-163426-1499-29/4?keyword=CategKitchenWk36LapseBuyer&mpre=http%3A%2F%2Fwww.ebay.com.sg%2Fsch%2FKitchen-Dining-Bar-%2F20625%2Fi.html%3FLH_ItemCondition%3D3%26_from%3DR40%26LH_BIN%3D1%26_nkw%3Dhello%2Bkitty%2B-disney%26LH_PrefLoc%3D2%26rt%3Dnc%0A",
-        "origin": [362, 0, 469, 48],
-        "title": "Kitchen"
-    }, {
-        "href": "http://rover.ebay.com/rover/1/3423-163426-1499-29/4?keyword=CategHomeDecoWk36LapseBuyer&mpre=http%3A%2F%2Fwww.ebay.com.sg%2Fsch%2FHolidays-Cards-Parties-%2F16086%2Fi.html%3FLH_BIN%3D1%26_sop%3D12%26_from%3DR40%26_udhi%3D25%26_nkw%3D%2528lantern%252C%2Bfairy%2Bberries%252C%2Bprojector%252C%2BLED%252C%2Billoom%252C%2Bglow%2529%2B-halloween%2B-mug%2B-memorial%2B-santa%26rt%3Dnc%0A",
-        "origin": [473, 0, 679, 48],
-        "title": "Home Deco"
-    }]
-};
-
-// edm = {
-//     "id": "35_SG",
-//     "title": "Mid-Autumn Sale: Hello Kitty Baking Essentials",
-//     "subject": "Mid-Autumn Sale: Hello Kitty Baking Essentials",
-//     "limited": "http://media.4at5.net/email_domains/ebay/160602/limitedtime.jpg",
-//     "banner":"http://imgur.com/brTNFwN.jpg?1",
-//     "country": "SG",
-//     "more": false,
-//     "images": "",
-//     "map": {
-//         origin: [0,0,126,49,129,0,223,49,226,0,404,49,406,0,544,49,548,0,677,49]
-//     } 
-// };
-
-// edm = {
-//     "id": "35_MY",
-//     "title":"Great Style Savings – From RM39! Grab Deals On Sexy Lingerie, Oakley, Thunderbird Watches & More!",
-//     "subject": "Great Style Savings – From RM39! Grab Deals On Sexy Lingerie, Oakley, Thunderbird Watches & More!",
-//     "limited": "http://www.ebaypowerhouse.com/portal/edm/images/2014/wk32_20140728/sg/yesmail/limitedtime.jpg",
-//     "country": "MY",
-//     "images": "",
-//     "more": "http://ebaypowerhouse.com/portal/edm/images/2014/wk35_20140818/my/yesmail/more_btn.jpg"
-// };
-
-var sections = require('./' + edm.id + '/sections.json');
-var products = require('./' + edm.id + '/products.json');
 var countries = {
     MY: {
         logo: "http://ebaypowerhouse.com/portal/edm/images/2014/wk35_20140818/my/yesmail/logo_my.jpg",
@@ -165,7 +107,7 @@ _.each(edm.sections, function(section) {
 
 mu.root = __dirname + '/';
 var input = mu.compileAndRender('mail.html', edm);
-var output = fs.createWriteStream(__dirname + "/" + edm.id + "/" + edm.id + ".html");
+var output = fs.createWriteStream(__dirname + "/" + id + "/" + id + ".html");
 
 input.on('data', function(data) {
     output.write(data);
