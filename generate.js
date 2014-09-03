@@ -1,4 +1,4 @@
-var id = process.argv[2];
+var id = process.argv[2].toUpperCase();
 var fs = require('fs');
 var _ = require('underscore');
 var mu = require('mu2');
