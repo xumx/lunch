@@ -791,7 +791,9 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td class="mcnImageContent" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;" valign="top">
-                                                                            <a href="{{href}}" target="_blank"><img alt="ebay {{country}}" src="{{logo}}" style="max-width:242px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" class="mcnImage" align="middle" width="242"></a>
+                                                                            <a href="{{href}}" target="_blank">
+                                                                                <img alt="ebay {{country}}" src="{{logo}}" style="max-width:242px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" class="mcnImage" align="middle" width="242">
+                                                                            </a>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -801,6 +803,21 @@
                                                 </tbody>
                                             </table>
                                             {{#banner}}
+                                            <map id="Map" name="Map">
+                                                {{#map}}
+                                                <area shape="rect" coords="{{big}}" target="_blank" href="{{href}}" alt="{{title}}" />{{/map}}
+                                            </map>
+
+                                            <map id="MapSmall" name="MapSmall">
+                                                {{#map}}
+                                                <area shape="rect" coords="{{small}}" target="_blank" href="{{href}}" alt="{{title}}" />{{/map}}
+                                            </map>
+
+                                            <map id="MapSmaller" name="MapSmaller">
+                                                {{#map}}
+                                                <area shape="rect" coords="{{smaller}}" target="_blank" href="{{href}}" alt="{{title}}" />{{/map}}
+                                            </map>
+
                                             <table class="mcnImageBlock" border="0" cellpadding="0" cellspacing="0" width="100%">
                                                 <tbody class="mcnImageBlockOuter">
                                                     <tr>
@@ -809,9 +826,15 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td align="center" class="mcnImageContent" valign="top">
-                                                                            <div desktop><img src="{{banner}}" alt="category tag" width="680" usemap="#Map" class="mcnImage" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" align="middle"></div>
-                                                                            <div mobile style="mso-hide:all;display:none;max-height:0px;overflow:hidden;"><img src="{{banner}}" alt="category tag" usemap="#MapSmall" class="mcnImage" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" align="middle"></div>
-                                                                            <div smaller style="mso-hide:all;display:none;max-height:0px;overflow:hidden;"><img src="{{banner}}" alt="category tag" usemap="#MapSmaller" class="mcnImage" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" align="middle"></div>
+                                                                            <div desktop>
+                                                                                <img src="{{banner}}" alt="category tag" width="680" usemap="#Map" class="mcnImage" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" align="middle">
+                                                                            </div>
+                                                                            <div mobile style="mso-hide:all;display:none;max-height:0px;overflow:hidden;">
+                                                                                <img src="{{banner}}" alt="category tag" usemap="#MapSmall" class="mcnImage" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" align="middle">
+                                                                            </div>
+                                                                            <div smaller style="mso-hide:all;display:none;max-height:0px;overflow:hidden;">
+                                                                                <img src="{{banner}}" alt="category tag" usemap="#MapSmaller" class="mcnImage" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" align="middle">
+                                                                            </div>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -861,7 +884,9 @@
                                                                     <tbody>
                                                                         <tr>
                                                                             <td class="mcnImageContent" style="padding-top: 0; padding-bottom: 0; text-align:center;" valign="top">
-                                                                                <a href="{{href}}" target="new"><img alt="{{title}}" src="{{src}}" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" class="mcnImage" align="middle" width="680"></a>
+                                                                                <a href="{{href}}" target="new">
+                                                                                    <img alt="{{title}}" src="{{src}}" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" class="mcnImage" align="middle" width="680">
+                                                                                </a>
                                                                             </td>
                                                                         </tr>
                                                                     </tbody>
@@ -881,7 +906,9 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td align="center" valign="top" class="mcnImageGroupContent" style="padding-left: 9px; padding-top: 0; padding-bottom: 0;">
-                                                                            <a href="{{href}}" target="new"><img alt="{{title}}" src="{{src}}" style="max-width:320px; padding-bottom: 0; display:block; border:0px;" class="mcnImage" width="264"></a>
+                                                                            <a href="{{href}}" target="new">
+                                                                                <img alt="{{title}}" src="{{src}}" style="max-width:320px; padding-bottom: 0; display:block; border:0px;" class="mcnImage" width="264">
+                                                                            </a>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -891,7 +918,9 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td align="center" valign="top" class="mcnImageGroupContent" style="padding-right: 9px; padding-top: 0; padding-bottom: 0;">
-                                                                            <a href="{{href}}" target="new"><img alt="{{title}}" src="{{src}}" style="max-width:320px; padding-bottom: 0; display:block; border:0px;" class="mcnImage" width="264"></a>
+                                                                            <a href="{{href}}" target="new">
+                                                                                <img alt="{{title}}" src="{{src}}" style="max-width:320px; padding-bottom: 0; display:block; border:0px;" class="mcnImage" width="264">
+                                                                            </a>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -911,7 +940,9 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td class="mcnImageContent" valign="top">
-                                                                            <a href="{{href}}" target="new"><img alt="more button" src="http://www.ebaypowerhouse.com/portal/edm/images/2014/wk32_20140728/sg/yesmail/more_btn.png" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom;border:0px;" class="mcnImage" align="left" width="644"></a>
+                                                                            <a href="{{href}}" target="new">
+                                                                                <img alt="more button" src="http://www.ebaypowerhouse.com/portal/edm/images/2014/wk32_20140728/sg/yesmail/more_btn.png" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom;border:0px;" class="mcnImage" align="left" width="644">
+                                                                            </a>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -941,7 +972,9 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td class="mcnImageContent" valign="top" style="padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;text-align: center;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                            <a href="{{paypal}}" title="" class="" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img align="center" alt="paypal" src="http://gallery.mailchimp.com/3a732f7f40904b46c4bad21a9/images/9064c503-284e-4356-b2d0-aa4c10405bdc.png" width="260" style="max-width: 260px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage"></a>
+                                                                            <a href="{{paypal}}" title="" class="" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                <img align="center" alt="paypal" src="http://gallery.mailchimp.com/3a732f7f40904b46c4bad21a9/images/9064c503-284e-4356-b2d0-aa4c10405bdc.png" width="260" style="max-width: 260px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage">
+                                                                            </a>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -973,7 +1006,9 @@
                                                                                                                 <tbody>
                                                                                                                     <tr>
                                                                                                                         <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                            <a href="{{facebook}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-96.png" alt="Facebook" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
+                                                                                                                            <a href="{{facebook}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                                <img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-96.png" alt="Facebook" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;">
+                                                                                                                            </a>
                                                                                                                         </td>
                                                                                                                     </tr>
 
@@ -999,7 +1034,9 @@
                                                                                                                 <tbody>
                                                                                                                     <tr>
                                                                                                                         <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                            <a href="{{twitter}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-96.png" alt="Twitter" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
+                                                                                                                            <a href="{{twitter}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                                <img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-96.png" alt="Twitter" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;">
+                                                                                                                            </a>
                                                                                                                         </td>
                                                                                                                     </tr>
 
@@ -1025,7 +1062,9 @@
                                                                                                                 <tbody>
                                                                                                                     <tr>
                                                                                                                         <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                            <a href="{{apple}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://gallery.mailchimp.com/3a732f7f40904b46c4bad21a9/images/d75e1374-02b9-4113-ac77-575626fd36d6.png" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
+                                                                                                                            <a href="{{apple}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                                <img src="http://gallery.mailchimp.com/3a732f7f40904b46c4bad21a9/images/d75e1374-02b9-4113-ac77-575626fd36d6.png" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;">
+                                                                                                                            </a>
                                                                                                                         </td>
                                                                                                                     </tr>
 
@@ -1051,7 +1090,9 @@
                                                                                                                 <tbody>
                                                                                                                     <tr>
                                                                                                                         <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 0;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                            <a href="{{android}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://gallery.mailchimp.com/3a732f7f40904b46c4bad21a9/images/a36ea080-b862-4be2-9a7b-ec6d1b26e1f0.png" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>
+                                                                                                                            <a href="{{android}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                                <img src="http://gallery.mailchimp.com/3a732f7f40904b46c4bad21a9/images/a36ea080-b862-4be2-9a7b-ec6d1b26e1f0.png" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;">
+                                                                                                                            </a>
                                                                                                                         </td>
                                                                                                                     </tr>
 
@@ -1142,24 +1183,6 @@
             </tr>
         </table>
     </center>
-
-    {{#banner}}
-    <map id="Map" name="Map">
-        {{#map}}
-        <area shape="rect" coords="{{big}}" target="_blank" href="{{href}}" alt="{{title}}" />{{/map}}
-    </map>
-
-    <map id="MapSmall" name="MapSmall">
-        {{#map}}
-        <area shape="rect" coords="{{small}}" target="_blank" href="{{href}}" alt="{{title}}" />{{/map}}
-    </map>
-
-    <map id="MapSmaller" name="MapSmaller">
-        {{#map}}
-        <area shape="rect" coords="{{smaller}}" target="_blank" href="{{href}}" alt="{{title}}" />{{/map}}
-    </map>
-
-    {{/banner}}
 </body>
 
 </html>
