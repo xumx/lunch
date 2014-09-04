@@ -1,90 +1,81 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-    <!-- NAME: 1 COLUMN -->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
-
-    <style type="text/css">
-    body,
-    #bodyTable,
-    #bodyCell {
-        height: 100% !important;
-        margin: 0;
-        padding: 0;
-        width: 100% !important;
-    }
-    table {
-        border-collapse: collapse;
-    }
-    img,
-    a img {
-        border: 0;
-        outline: none;
-        text-decoration: none;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin: 0;
-        padding: 0;
-    }
-    p {
-        margin: 1em 0;
-        padding: 0;
-    }
-    a {
-        word-wrap: break-word;
-    }
-    .ReadMsgBody {
-        width: 100%;
-    }
-    .ExternalClass {
-        width: 100%;
-    }
-    .ExternalClass,
-    .ExternalClass p,
-    .ExternalClass span,
-    .ExternalClass font,
-    .ExternalClass td,
-    .ExternalClass div {
-        line-height: 100%;
-    }
-    table,
-    td {
-        mso-table-lspace: 0pt;
-        mso-table-rspace: 0pt;
-    }
-    #outlook a {
-        padding: 0;
-    }
-    img {
-        -ms-interpolation-mode: bicubic;
-    }
-    body,
-    table,
-    td,
-    p,
-    a,
-    li,
-    blockquote {
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
-    }
-    #bodyCell {
-        padding: 20px;
-    }
-    .mcnImage {
-        vertical-align: bottom;
-    }
-    .mcnTextContent img {
-        height: auto !important;
-    }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><!-- NAME: 1 COLUMN --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>{{title}}</title><style type="text/css">
+body,
+#bodyTable,
+#bodyCell {
+    height: 100% !important;
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+}
+table {
+    border-collapse: collapse;
+}
+img,
+a img {
+    border: 0;
+    outline: none;
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 1em 0;
+    padding: 0;
+}
+a {
+    word-wrap: break-word;
+}
+.ReadMsgBody {
+    width: 100%;
+}
+.ExternalClass {
+    width: 100%;
+}
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+    line-height: 100%;
+}
+table,
+td {
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
+}
+#outlook a {
+    padding: 0;
+}
+img {
+    -ms-interpolation-mode: bicubic;
+}
+body,
+table,
+td,
+p,
+a,
+li,
+blockquote {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+#bodyCell {
+    padding: 20px;
+}
+.mcnImage {
+    vertical-align: bottom;
+}
+.mcnTextContent img {
+    height: auto !important;
+}
     /*
     @tab Page
     @section background style
@@ -350,6 +341,81 @@
         text-decoration: underline;
     }
     /*
+    @tab Columns
+    @section column style
+    @tip Set the background color and borders for your email's columns area.
+    */
+    #templateColumns {
+        /*@editable*/
+        background-color: #FFFFFF;
+        /*@editable*/
+        border-top: 0;
+        /*@editable*/
+        border-bottom: 0;
+    }
+    /*
+    @tab Columns
+    @section left column text
+    @tip Set the styling for your email's left column text. Choose a size and color that is easy to read.
+    */
+    .leftColumnContainer .mcnTextContent,
+    .leftColumnContainer .mcnTextContent p {
+        /*@editable*/
+        color: #606060;
+        /*@editable*/
+        font-family: Helvetica;
+        /*@editable*/
+        font-size: 15px;
+        /*@editable*/
+        line-height: 150%;
+        /*@editable*/
+        text-align: left;
+    }
+    /*
+    @tab Columns
+    @section left column link
+    @tip Set the styling for your email's left column links. Choose a color that helps them stand out from your text.
+    */
+    .leftColumnContainer .mcnTextContent a {
+        /*@editable*/
+        color: #6DC6DD;
+        /*@editable*/
+        font-weight: normal;
+        /*@editable*/
+        text-decoration: underline;
+    }
+    /*
+    @tab Columns
+    @section right column text
+    @tip Set the styling for your email's right column text. Choose a size and color that is easy to read.
+    */
+    .rightColumnContainer .mcnTextContent,
+    .rightColumnContainer .mcnTextContent p {
+        /*@editable*/
+        color: #606060;
+        /*@editable*/
+        font-family: Helvetica;
+        /*@editable*/
+        font-size: 15px;
+        /*@editable*/
+        line-height: 150%;
+        /*@editable*/
+        text-align: left;
+    }
+    /*
+    @tab Columns
+    @section right column link
+    @tip Set the styling for your email's right column links. Choose a color that helps them stand out from your text.
+    */
+    .rightColumnContainer .mcnTextContent a {
+        /*@editable*/
+        color: #6DC6DD;
+        /*@editable*/
+        font-weight: normal;
+        /*@editable*/
+        text-decoration: underline;
+    }
+    /*
     @tab Footer
     @section footer style
     @tip Set the background color and borders for your email's footer area.
@@ -493,24 +559,6 @@
         }
     }
     @media only screen and (max-width: 480px) {
-        td[class=mcnImageCardLeftImageContent],
-        td[class=mcnImageCardRightImageContent] {
-            padding-right: 18px !important;
-            padding-left: 18px !important;
-            padding-bottom: 0 !important;
-        }
-    }
-    @media only screen and (max-width: 480px) {
-        td[class=mcnImageCardBottomImageContent] {
-            padding-bottom: 9px !important;
-        }
-    }
-    @media only screen and (max-width: 480px) {
-        td[class=mcnImageCardTopImageContent] {
-            padding-top: 18px !important;
-        }
-    }
-    @media only screen and (max-width: 480px) {
         table[class=mcnCaptionLeftContentOuter] td[class=mcnTextContent],
         table[class=mcnCaptionRightContentOuter] td[class=mcnTextContent] {
             padding-top: 9px !important;
@@ -528,6 +576,13 @@
         }
     }
     @media only screen and (max-width: 480px) {
+        td[class=columnsContainer] {
+            display: block !important;
+            max-width: 600px !important;
+            width: 100% !important;
+        }
+    }
+    @media only screen and (max-width: 480px) {
         td[class=mcnTextContent] {
             padding-right: 18px !important;
             padding-left: 18px !important;
@@ -539,650 +594,224 @@
     @section template width
     @tip Make the template fluid for portrait or landscape view adaptability. If a fluid layout doesn't work for you, set the width to 300px instead.
     */
-        table[id=templateContainer],
-        table[id=templatePreheader],
-        table[id=templateHeader],
-        table[id=templateBody],
-        table[id=templateFooter] {
+    table[id=templateContainer],
+    table[id=templatePreheader],
+    table[id=templateHeader],
+    table[id=templateColumns],
+    table[class=templateColumn],
+    table[id=templateBody],
+    table[id=templateFooter] {
             /*@tab Mobile Styles
 @section template width
 @tip Make the template fluid for portrait or landscape view adaptability. If a fluid layout doesn't work for you, set the width to 300px instead.*/
-            max-width: 680px !important;
-            /*@editable*/
-            width: 100% !important;
-        }
-    }
-    @media only screen and (max-width: 480px) {
+max-width: 600px !important;
+/*@editable*/
+width: 100% !important;
+}
+}
+@media only screen and (max-width: 480px) {
         /*
     @tab Mobile Styles
     @section heading 1
     @tip Make the first-level headings larger in size for better readability on small screens.
     */
-        h1 {
-            /*@editable*/
-            font-size: 24px !important;
-            /*@editable*/
-            line-height: 125% !important;
-        }
+    h1 {
+        /*@editable*/
+        font-size: 24px !important;
+        /*@editable*/
+        line-height: 125% !important;
     }
-    @media only screen and (max-width: 480px) {
+}
+@media only screen and (max-width: 480px) {
         /*
     @tab Mobile Styles
     @section heading 2
     @tip Make the second-level headings larger in size for better readability on small screens.
     */
-        h2 {
-            /*@editable*/
-            font-size: 20px !important;
-            /*@editable*/
-            line-height: 125% !important;
-        }
+    h2 {
+        /*@editable*/
+        font-size: 20px !important;
+        /*@editable*/
+        line-height: 125% !important;
     }
-    @media only screen and (max-width: 480px) {
+}
+@media only screen and (max-width: 480px) {
         /*
     @tab Mobile Styles
     @section heading 3
     @tip Make the third-level headings larger in size for better readability on small screens.
     */
-        h3 {
-            /*@editable*/
-            font-size: 18px !important;
-            /*@editable*/
-            line-height: 125% !important;
-        }
+    h3 {
+        /*@editable*/
+        font-size: 18px !important;
+        /*@editable*/
+        line-height: 125% !important;
     }
-    @media only screen and (max-width: 480px) {
+}
+@media only screen and (max-width: 480px) {
         /*
     @tab Mobile Styles
     @section heading 4
     @tip Make the fourth-level headings larger in size for better readability on small screens.
     */
-        h4 {
-            /*@editable*/
-            font-size: 16px !important;
-            /*@editable*/
-            line-height: 125% !important;
-        }
+    h4 {
+        /*@editable*/
+        font-size: 16px !important;
+        /*@editable*/
+        line-height: 125% !important;
     }
-    @media only screen and (max-width: 480px) {
+}
+@media only screen and (max-width: 480px) {
         /*
     @tab Mobile Styles
     @section Boxed Text
     @tip Make the boxed text larger in size for better readability on small screens. We recommend a font size of at least 16px.
     */
-        table[class=mcnBoxedTextContentContainer] td[class=mcnTextContent],
-        td[class=mcnBoxedTextContentContainer] td[class=mcnTextContent] p {
-            /*@editable*/
-            font-size: 18px !important;
-            /*@editable*/
-            line-height: 125% !important;
-        }
+    table[class=mcnBoxedTextContentContainer] td[class=mcnTextContent],
+    td[class=mcnBoxedTextContentContainer] td[class=mcnTextContent] p {
+        /*@editable*/
+        font-size: 18px !important;
+        /*@editable*/
+        line-height: 125% !important;
     }
-    @media only screen and (max-width: 480px) {
+}
+@media only screen and (max-width: 480px) {
         /*
     @tab Mobile Styles
     @section Preheader Visibility
     @tip Set the visibility of the email's preheader on small screens. You can hide it to save space.
     */
-        table[id=templatePreheader] {
-            /*@editable*/
-            display: block !important;
-        }
+    table[id=templatePreheader] {
+        /*@editable*/
+        display: block !important;
     }
-    @media only screen and (max-width: 480px) {
+}
+@media only screen and (max-width: 480px) {
         /*
     @tab Mobile Styles
     @section Preheader Text
     @tip Make the preheader text larger in size for better readability on small screens.
     */
-        td[class=preheaderContainer] td[class=mcnTextContent],
-        td[class=preheaderContainer] td[class=mcnTextContent] p {
-            /*@editable*/
-            font-size: 14px !important;
-            /*@editable*/
-            line-height: 115% !important;
-        }
+    td[class=preheaderContainer] td[class=mcnTextContent],
+    td[class=preheaderContainer] td[class=mcnTextContent] p {
+        /*@editable*/
+        font-size: 14px !important;
+        /*@editable*/
+        line-height: 115% !important;
     }
-    @media only screen and (max-width: 480px) {
+}
+@media only screen and (max-width: 480px) {
         /*
     @tab Mobile Styles
     @section Header Text
     @tip Make the header text larger in size for better readability on small screens.
     */
-        td[class=headerContainer] td[class=mcnTextContent],
-        td[class=headerContainer] td[class=mcnTextContent] p {
-            /*@editable*/
-            font-size: 18px !important;
-            /*@editable*/
-            line-height: 125% !important;
-        }
+    td[class=headerContainer] td[class=mcnTextContent],
+    td[class=headerContainer] td[class=mcnTextContent] p {
+        /*@editable*/
+        font-size: 18px !important;
+        /*@editable*/
+        line-height: 125% !important;
     }
-    @media only screen and (max-width: 480px) {
+}
+@media only screen and (max-width: 480px) {
         /*
     @tab Mobile Styles
     @section Body Text
     @tip Make the body text larger in size for better readability on small screens. We recommend a font size of at least 16px.
     */
-        td[class=bodyContainer] td[class=mcnTextContent],
-        td[class=bodyContainer] td[class=mcnTextContent] p {
-            /*@editable*/
-            font-size: 18px !important;
-            /*@editable*/
-            line-height: 125% !important;
-        }
+    td[class=bodyContainer] td[class=mcnTextContent],
+    td[class=bodyContainer] td[class=mcnTextContent] p {
+        /*@editable*/
+        font-size: 18px !important;
+        /*@editable*/
+        line-height: 125% !important;
     }
-    @media only screen and (max-width: 480px) {
+}
+@media only screen and (max-width: 480px) {
+        /*
+    @tab Mobile Styles
+    @section Left Column Text
+    @tip Make the left column text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+    */
+    td[class=leftColumnContainer] td[class=mcnTextContent],
+    td[class=leftColumnContainer] td[class=mcnTextContent] p {
+        /*@editable*/
+        font-size: 18px !important;
+        /*@editable*/
+        line-height: 125% !important;
+    }
+}
+@media only screen and (max-width: 480px) {
+        /*
+    @tab Mobile Styles
+    @section Right Column Text
+    @tip Make the right column text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+    */
+    td[class=rightColumnContainer] td[class=mcnTextContent],
+    td[class=rightColumnContainer] td[class=mcnTextContent] p {
+        /*@editable*/
+        font-size: 18px !important;
+        /*@editable*/
+        line-height: 125% !important;
+    }
+}
+@media only screen and (max-width: 480px) {
         /*
     @tab Mobile Styles
     @section footer text
     @tip Make the body content text larger in size for better readability on small screens.
     */
-        td[class=footerContainer] td[class=mcnTextContent],
-        td[class=footerContainer] td[class=mcnTextContent] p {
-            /*@editable*/
-            font-size: 14px !important;
-            /*@editable*/
-            line-height: 115% !important;
-        }
+    td[class=footerContainer] td[class=mcnTextContent],
+    td[class=footerContainer] td[class=mcnTextContent] p {
+        /*@editable*/
+        font-size: 14px !important;
+        /*@editable*/
+        line-height: 115% !important;
     }
-    @media only screen and (max-width: 480px) {
-        td[class=footerContainer] a[class=utilityLink] {
-            display: block !important;
-        }
+}
+@media only screen and (max-width: 480px) {
+    td[class=footerContainer] a[class=utilityLink] {
+        display: block !important;
     }
-    @media only screen and (max-width: 480px) {
-        *[desktop] {
-            overflow: hidden;
-            float: left;
-            display: none;
-            line-height: 0px;
-            width: 0;
-            height: 0;
-            max-height: 0px;
-        }
-        *[mobile] {
-            display: block !important;
-            max-height: none !important;
-        }
+}
+@media only screen and (max-width: 480px) {
+    table[class=navBar] {
+        width: 100% !important;
+        float: left;
     }
-    @media only screen and (max-width: 400px) {
-        *[desktop] {
-            overflow: hidden;
-            float: left;
-            display: none;
-            line-height: 0px;
-            width: 0;
-            height: 0;
-            max-height: 0px;
-        }
-        *[mobile] {
-            overflow: hidden;
-            float: left;
-            display: none;
-            line-height: 0px;
-            width: 0;
-            height: 0;
-            max-height: 0px;
-        }
-        *[smaller] {
-            display: block !important;
-            max-height: none !important;
-        }
+}
+@media only screen and (max-width: 480px) {
+    table[class=navBar] img {
+        height: auto!important;
+        float: left;
     }
-    </style>
-</head>
-
-<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
-    <center>
-        <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
-            <tr>
-                <td align="center" valign="top" id="bodyCell">
-
-                    <!-- BEGIN TEMPLATE // -->
-
-                    <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="680" class="mcnTextContentContainer">
-                        <tbody>
-                            <tr>
-                                <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 0; padding-bottom: 0px; padding-left: 18px; color: #606060;font-family: Helvetica;font-size: 11px;line-height: 10px;" align="right">
-                                    <font style="margin: 1em 0px;padding: 0px;color: #aeaeae;font-family: Helvetica;font-size: 11px;line-height: 13.75px;">{{subject}}</font>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-
-                    <!-- VIEW IN BROWSER -->
-                    <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="680" class="mcnTextContentContainer">
-                        <tbody>
-                            <tr>
-                                <td valign="top" class="mcnTextContent" style="padding-top:3px; padding-right: 0; padding-bottom: 9px; padding-left: 18px; color: #606060;font-family: Helvetica;font-size: 11px;line-height: 13.75px;" align="right">
-                                    <font style="margin: 1em 0px;padding: 0px;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 13.75px;"><a href="@HTML_PREVIEW_LINK" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-weight: normal;text-decoration: underline;">View this email in your browser</a>
-                                    </font>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- VIEW IN BROWSER END -->
-
-
-                    <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="680" id="templateContainer">
-                        <tr>
-                            <td align="center" valign="top">
-                                <!-- BEGIN PREHEADER // -->
-                                <table border="0" cellpadding="0" cellspacing="0" width="680" id="templatePreheader">
-                                    <tr>
-                                        <td valign="top" class="preheaderContainer" style="padding-top:9px;"></td>
-                                    </tr>
-                                </table>
-                                <!-- // END PREHEADER -->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center" valign="top">
-                                <!-- BEGIN HEADER // -->
-                                <table border="0" cellpadding="0" cellspacing="0" width="680" id="templateHeader">
-                                    <tr>
-                                        <td valign="top" class="headerContainer">
-                                            <table class="mcnImageBlock" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tbody class="mcnImageBlockOuter">
-                                                    <tr>
-                                                        <td style="padding-bottom:8px" class="mcnImageBlockInner" valign="top">
-                                                            <table class="mcnImageContentContainer" border="0" cellpadding="0" cellspacing="0" align="left" width="100%">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td class="mcnImageContent" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;" valign="top">
-                                                                            <a href="{{href}}" target="_blank">
-                                                                                <img alt="ebay {{country}}" src="{{logo}}" style="max-width:242px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" class="mcnImage" align="middle" width="242">
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            {{#banner}}
-                                            <map id="Map" name="Map">
-                                                {{#map}}
-                                                <area shape="rect" coords="{{big}}" target="_blank" href="{{href}}" alt="{{title}}" />{{/map}}
-                                            </map>
-
-                                            <map id="MapSmall" name="MapSmall">
-                                                {{#map}}
-                                                <area shape="rect" coords="{{small}}" target="_blank" href="{{href}}" alt="{{title}}" />{{/map}}
-                                            </map>
-
-                                            <map id="MapSmaller" name="MapSmaller">
-                                                {{#map}}
-                                                <area shape="rect" coords="{{smaller}}" target="_blank" href="{{href}}" alt="{{title}}" />{{/map}}
-                                            </map>
-
-                                            <table class="mcnImageBlock" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tbody class="mcnImageBlockOuter">
-                                                    <tr>
-                                                        <td style="padding:0px" class="mcnImageBlockInner" valign="top">
-                                                            <table class="mcnImageContentContainer" border="0" cellpadding="0" cellspacing="0" align="left" width="100%">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td align="center" class="mcnImageContent" valign="top">
-                                                                            <div desktop>
-                                                                                <img src="{{banner}}" alt="category tag" width="680" usemap="#Map" class="mcnImage" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" align="middle">
-                                                                            </div>
-                                                                            <div mobile style="mso-hide:all;display:none;max-height:0px;overflow:hidden;">
-                                                                                <img src="{{banner}}" alt="category tag" usemap="#MapSmall" class="mcnImage" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" align="middle">
-                                                                            </div>
-                                                                            <div smaller style="mso-hide:all;display:none;max-height:0px;overflow:hidden;">
-                                                                                <img src="{{banner}}" alt="category tag" usemap="#MapSmaller" class="mcnImage" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" align="middle">
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            {{/banner}} {{#limited}}
-                                            <table class="mcnImageBlock" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tbody class="mcnImageBlockOuter">
-                                                    <tr>
-                                                        <td style="padding-top: 5px; padding-bottom: 5px" class="mcnImageBlockInner" valign="top">
-                                                            <table class="mcnImageContentContainer" border="0" cellpadding="0" cellspacing="0" align="left" width="100%">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td align="center" class="mcnImageContent" valign="top">
-                                                                            <img alt="Limited stock" src="{{limited}}" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" class="mcnImage" align="middle" width="680">
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            {{/limited}}
-                                        </td>
-                                    </tr>
-                                </table>
-                                <!-- // END HEADER -->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center" valign="top">
-                                <!-- BEGIN BODY // -->
-                                <table border="0" cellpadding="0" cellspacing="0" width="680" id="templateBody">
-                                    <tr>
-                                        <td valign="top" class="bodyContainer">
-                                            {{#sections}}
-                                            <table class="mcnImageBlock" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tbody class="mcnImageBlockOuter">
-                                                    <tr>
-                                                        <td class="mcnImageBlockInner" valign="top">
-                                                            <a name="{{title}}">
-                                                                <table class="mcnImageContentContainer" border="0" cellpadding="0" cellspacing="0" align="left" width="100%">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td class="mcnImageContent" style="padding-top: 0; padding-bottom: 0; text-align:center;" valign="top">
-                                                                                <a href="{{href}}" target="new">
-                                                                                    <img alt="{{title}}" src="{{src}}" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" class="mcnImage" align="middle" width="680">
-                                                                                </a>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <table class="mcnImageGroupBlock" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tbody class="mcnImageGroupBlockOuter">
-                                                    {{#rows}}
-                                                    <tr>
-                                                        <td align="center" valign="top" style="padding-left:9px;padding-right:9px" class="mcnImageGroupBlockInner">
-                                                            {{#left}}
-                                                            <table class="mcnImageGroupContentContainer" border="0" cellpadding="0" cellspacing="0" align="left" width="273">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td align="center" valign="top" class="mcnImageGroupContent" style="padding-left: 9px; padding-top: 0; padding-bottom: 0;">
-                                                                            <a href="{{href}}" target="new">
-                                                                                <img alt="{{title}}" src="{{src}}" style="max-width:320px; padding-bottom: 0; display:block; border:0px;" class="mcnImage" width="264">
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                            {{/left}} {{#right}}
-                                                            <table class="mcnImageGroupContentContainer" border="0" cellpadding="0" cellspacing="0" align="right" width="273">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td align="center" valign="top" class="mcnImageGroupContent" style="padding-right: 9px; padding-top: 0; padding-bottom: 0;">
-                                                                            <a href="{{href}}" target="new">
-                                                                                <img alt="{{title}}" src="{{src}}" style="max-width:320px; padding-bottom: 0; display:block; border:0px;" class="mcnImage" width="264">
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                            {{/right}}
-                                                        </td>
-                                                    </tr>
-                                                    {{/rows}}
-                                                </tbody>
-                                            </table>
-                                            {{#more}}
-                                            <table class="mcnImageBlock" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tbody class="mcnImageBlockOuter">
-                                                    <tr>
-                                                        <td style="padding:18px" class="mcnImageBlockInner" valign="top">
-                                                            <table class="mcnImageContentContainer" border="0" cellpadding="0" cellspacing="0" align="left" width="100%">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td class="mcnImageContent" valign="top">
-                                                                            <a href="{{href}}" target="new">
-                                                                                <img alt="more button" src="http://www.ebaypowerhouse.com/portal/edm/images/2014/wk32_20140728/sg/yesmail/more_btn.png" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom;border:0px;" class="mcnImage" align="left" width="644">
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            {{/more}} {{/sections}}
-                                        </td>
-                                    </tr>
-                                </table>
-                                <!-- // END BODY -->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center" valign="top">
-                                <!-- BEGIN FOOTER // -->
-                                <table border="0" cellpadding="0" cellspacing="0" width="680" id="templateFooter" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;border-top: 0;border-bottom: 0;">
-                                    <tr>
-                                        <td valign="top" class="footerContainer" style="padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                <tbody class="mcnImageBlockOuter">
-                                                    <tr>
-                                                        <td valign="top" style="padding: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnImageBlockInner">
-                                                            <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td class="mcnImageContent" valign="top" style="padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;text-align: center;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                            <a href="{{paypal}}" title="" class="" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                <img align="center" alt="paypal" src="http://gallery.mailchimp.com/3a732f7f40904b46c4bad21a9/images/9064c503-284e-4356-b2d0-aa4c10405bdc.png" width="260" style="max-width: 260px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage">
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                <tbody class="mcnFollowBlockOuter">
-                                                    <tr>
-                                                        <td align="center" valign="top" style="padding: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnFollowBlockInner">
-                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowContentContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td align="center" style="padding-left: 9px;padding-right: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowContent" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td align="center" valign="top" style="padding-top: 9px;padding-right: 9px;padding-left: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                <tbody>
-                                                                                                    <tr>
-                                                                                                        <td valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-
-
-                                                                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnFollowStacked" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-
-                                                                                                                <tbody>
-                                                                                                                    <tr>
-                                                                                                                        <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                            <a href="{{facebook}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                                <img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-96.png" alt="Facebook" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;">
-                                                                                                                            </a>
-                                                                                                                        </td>
-                                                                                                                    </tr>
-
-
-                                                                                                                    <tr>
-                                                                                                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                            <a href="{{facebook}}" target="_blank" style="color: #606060;font-family: Verdana, Geneva, sans-serif;font-size: 11px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Facebook</a>
-                                                                                                                        </td>
-                                                                                                                    </tr>
-
-                                                                                                                </tbody>
-                                                                                                            </table>
-
-
-                                                                                                            <!--[if gte mso 6]>
-                                                                   </td>
-                                                                   <td align="left" valign="top">
-                                                                     <![endif]-->
-
-
-                                                                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnFollowStacked" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-
-                                                                                                                <tbody>
-                                                                                                                    <tr>
-                                                                                                                        <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                            <a href="{{twitter}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                                <img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-96.png" alt="Twitter" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;">
-                                                                                                                            </a>
-                                                                                                                        </td>
-                                                                                                                    </tr>
-
-
-                                                                                                                    <tr>
-                                                                                                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                            <a href="{{twitter}}" target="_blank" style="color: #606060;font-family: Verdana, Geneva, sans-serif;font-size: 11px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Twitter</a>
-                                                                                                                        </td>
-                                                                                                                    </tr>
-
-                                                                                                                </tbody>
-                                                                                                            </table>
-
-
-                                                                                                            <!--[if gte mso 6]>
-                                                                   </td>
-                                                                   <td align="left" valign="top">
-                                                                     <![endif]-->
-
-
-                                                                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnFollowStacked" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-
-                                                                                                                <tbody>
-                                                                                                                    <tr>
-                                                                                                                        <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                            <a href="{{apple}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                                <img src="http://gallery.mailchimp.com/3a732f7f40904b46c4bad21a9/images/d75e1374-02b9-4113-ac77-575626fd36d6.png" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;">
-                                                                                                                            </a>
-                                                                                                                        </td>
-                                                                                                                    </tr>
-
-
-                                                                                                                    <tr>
-                                                                                                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                            <a href="{{apple}}" target="_blank" style="color: #606060;font-family: Verdana, Geneva, sans-serif;font-size: 11px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">App Store</a>
-                                                                                                                        </td>
-                                                                                                                    </tr>
-
-                                                                                                                </tbody>
-                                                                                                            </table>
-
-
-                                                                                                            <!--[if gte mso 6]>
-                                                                   </td>
-                                                                   <td align="left" valign="top">
-                                                                     <![endif]-->
-
-
-                                                                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnFollowStacked" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-
-                                                                                                                <tbody>
-                                                                                                                    <tr>
-                                                                                                                        <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 0;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                            <a href="{{android}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                                <img src="http://gallery.mailchimp.com/3a732f7f40904b46c4bad21a9/images/a36ea080-b862-4be2-9a7b-ec6d1b26e1f0.png" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;">
-                                                                                                                            </a>
-                                                                                                                        </td>
-                                                                                                                    </tr>
-
-
-                                                                                                                    <tr>
-                                                                                                                        <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 0;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                                                            <a href="{{android}}" target="_blank" style="color: #606060;font-family: Verdana, Geneva, sans-serif;font-size: 11px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Play Store</a>
-                                                                                                                        </td>
-                                                                                                                    </tr>
-
-                                                                                                                </tbody>
-                                                                                                            </table>
-
-
-                                                                                                            <!--[if gte mso 6]>
-                                                                   </td>
-                                                                   <td align="left" valign="top">
-                                                                     <![endif]-->
-
-                                                                                                        </td>
-                                                                                                    </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                <tbody class="mcnTextBlockOuter">
-                                                    <tr>
-                                                        <td valign="top" class="mcnTextBlockInner" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-
-                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="680" class="mcnTextContentContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                <tbody>
-                                                                    <tr>
-
-                                                                        <td valign="top" class="mcnTextContent" style="padding: 9px 18px;color: #CCCCCC;font-family: Tahoma, Verdana, Segoe, sans-serif;font-size: 9px;font-weight: normal;line-height: 100%;text-align: center;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-
-                                                                            <table cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td class="td1" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                                            <p class="p1" style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 125%;">eBay International AG sent this e-mail to you because your Notification Preferences&nbsp;indicate that you want to receive information about Special Promotions, Offers and Events.&nbsp;All items are subject to availability. Prices are correct at time of publication but are subject to change without prior notice.&nbsp;</p>
-
-                                                                                            <p class="p1" style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 125%;">If you do not wish to receive the eBay Deals Alert email, please click <a href="{{unsubscribe}}" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-weight: normal;text-decoration: underline;">here</a> to unsubscribe or sign into "My eBay" by clicking on the "My eBay" link found at the top of the eBay home page and change your Notification Preferences.&nbsp;</p>
-
-                                                                                            <p class="p1" style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 125%;">Please note that it may take up to 10 days to process your request.&nbsp;</p>
-
-                                                                                            <p class="p1" style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 125%;">Visit our <a href="{{privacy}}" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-weight: normal;text-decoration: underline;">Privacy Policy</a> and <a href="{{agreement}}" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-weight: normal;text-decoration: underline;">User Agreement</a> if you have any questions.&nbsp;</p>
-
-                                                                                            <p class="p1" style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 125%;">Copyright © 2014 eBay Inc. All Rights Reserved.&nbsp;</p>
-
-                                                                                            <p class="p1" style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 125%;">Designated trademarks and brands are the property of their respective owners.&nbsp;</p>
-
-                                                                                            <p class="p1" style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 125%;">eBay and the eBay logo are trademarks of eBay Inc.</p>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <!-- // END FOOTER -->
-                            </td>
-                        </tr>
-                    </table>
-                    <!-- // END TEMPLATE -->
-                </td>
-            </tr>
-        </table>
-    </center>
-</body>
-
-</html>
+}
+</style></head><body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0"><center><table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable"><tr><td align="center" valign="top" id="bodyCell"><!-- BEGIN TEMPLATE // --><table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="694" id="templateContainer"><tr><td width="694" align="center" valign="top"><!-- BEGIN PREHEADER // --><table border="0" cellpadding="0" cellspacing="0" width="680" id="templatePreheader"><tr><td valign="top" class="preheaderContainer" style="padding-top:9px;"><table class="mcnTextBlock" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody class="mcnTextBlockOuter"><tr><td class="mcnTextBlockInner" valign="top"><table class="mcnTextContentContainer" border="0" cellpadding="0" cellspacing="0" align="left" width="366"><tbody><tr><td align="left" class="mcnTextContent" style="padding-top:9px; padding-left:18px; padding-bottom:9px; padding-right:0;" valign="top">{{subject}}
+</td></tr></tbody></table><table class="mcnTextContentContainer" border="0" cellpadding="0" cellspacing="0" align="right" width="198"><tbody><tr><td width="198" align="right" valign="top" class="mcnTextContent" style="padding-top:3px; padding-right: 0; padding-bottom: 9px; padding-left: 18px; color: #606060;font-family: Helvetica;font-size: 11px;line-height: 13.75px;"><font style="margin: 1em 0px;padding: 0px;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 13.75px;"><a href="@HTML_PREVIEW_LINK" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-weight: normal;text-decoration: underline;">View this email in your browser</a></font></td></tr></tbody></table></td></tr></tbody></table></td></tr></table><!-- // END PREHEADER --></td></tr><tr><td align="center" valign="top"><!-- BEGIN HEADER // --><table border="0" cellpadding="0" cellspacing="0" width="680" id="templateHeader"><tr><td valign="top" class="headerContainer"><table class="mcnImageBlock" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody class="mcnImageBlockOuter"><tr><td style="padding:9px" class="mcnImageBlockInner" valign="top"><table class="mcnImageContentContainer" border="0" cellpadding="0" cellspacing="0" align="left" width="100%"><tbody><tr><td class="mcnImageContent" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;" valign="top"><a href="{{href}}" target="new"><img alt="eBay {{country}}" src="{{logo}}" style="max-width:242px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0;" class="mcnImage" align="middle" width="242"></a></td></tr></tbody></table></td></tr></tbody></table>
+{{#banner}}
+<table border="0" cellpadding="0" cellspacing="0"><tr><td align="left" style="padding:0;" valign="top"><table border="0" cellpadding="0" cellspacing="0" align="left"><tr><td align="left" style="padding-right: 0px; padding-top: 0; padding-bottom: 0;" valign="top" class="mcnImageContent"><table bgcolor="#000000" style="border-bottom:solid 1px #FFFFFF; padding:0px;" border="0" cellpadding="0" cellspacing="0" align="left" class="navBar"><tr>
+    {{#map}}
+    <td bgcolor="#000000" width="{{width}}" align="center" valign="top" style="padding:0px;"><a href="{{href}}" target="new"><img src="{{src}}" alt="" width="{{width}}" height="47" style="border:0px; display:block;" class="mcnImage" /></a></td>
+    {{/map}}
+</tr></table></td></tr></table></td></tr></table>
+{{/banner}} {{#limited}}
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock"><tbody class="mcnImageBlockOuter"><tr><td valign="top" style="padding-top:9px;padding-bottom:9px;" class="mcnImageBlockInner"><table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer"><tbody><tr><td class="mcnImageContent" valign="top" style="padding-top: 0; padding-bottom: 0;"><img align="left" alt="" src="{{limited}}" width="680" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage" border="0"></td></tr></tbody></table></td></tr></tbody></table>
+{{/limited}}
+</td></tr></table><!-- // END HEADER --></td></tr><tr><td align="center" valign="top"><!-- BEGIN BODY // --><table border="0" cellpadding="0" cellspacing="0" width="680" id="templateBody"><tr><td valign="top" class="bodyContainer">
+{{#sections}}
+<table class="mcnImageBlock" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody class="mcnImageBlockOuter"><tr><td class="mcnImageBlockInner" valign="top"><a name="{{title}}"><table class="mcnImageContentContainer" border="0" cellpadding="0" cellspacing="0" align="left" width="100%"><tbody><tr><td class="mcnImageContent" style="padding-top: 0; padding-bottom: 0; text-align:center;" valign="top">{{#href}}<a href="{{href}}" target="new">{{/href}}<img alt="{{title}}" src="{{src}}" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom; border:0px;" class="mcnImage" align="middle" width="680">{{#href}}</a>{{/href}}</td></tr></tbody></table></a></td></tr></tbody></table><table class="mcnImageGroupBlock" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody class="mcnImageGroupBlockOuter">
+{{#rows}}
+<tr><td align="center" valign="top" style="padding-left:9px;padding-right:9px" class="mcnImageGroupBlockInner">
+    {{#left}}
+    <table class="mcnImageGroupContentContainer" border="0" cellpadding="0" cellspacing="0" align="left" width="273"><tbody><tr><td align="center" valign="top" class="mcnImageGroupContent" style="padding-left: 9px; padding-top: 0; padding-bottom: 0;"><a href="{{href}}" target="new"><img alt="{{title}}" src="{{src}}" style="max-width:320px; padding-bottom: 0; display:block; border:0px;" class="mcnImage" width="264"></a></td></tr></tbody></table>
+    {{/left}} {{#right}}
+    <table class="mcnImageGroupContentContainer" border="0" cellpadding="0" cellspacing="0" align="right" width="273"><tbody><tr><td align="center" valign="top" class="mcnImageGroupContent" style="padding-right: 9px; padding-top: 0; padding-bottom: 0;"><a href="{{href}}" target="new"><img alt="{{title}}" src="{{src}}" style="max-width:320px; padding-bottom: 0; display:block; border:0px;" class="mcnImage" width="264"></a></td></tr></tbody></table>
+    {{/right}}
+</td></tr>
+{{/rows}}
+</tbody></table>
+{{#more}}
+<table class="mcnImageBlock" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody class="mcnImageBlockOuter"><tr><td style="padding:18px" class="mcnImageBlockInner" valign="top"><table class="mcnImageContentContainer" border="0" cellpadding="0" cellspacing="0" align="left" width="100%"><tbody><tr><td class="mcnImageContent" valign="top"><a href="{{href}}" target="new"><img alt="more button" src="http://www.ebaypowerhouse.com/portal/edm/images/2014/wk32_20140728/sg/yesmail/more_btn.png" style="max-width:680px; padding-bottom: 0; display: inline !important; vertical-align: bottom;border:0px;" class="mcnImage" align="left" width="644"></a></td></tr></tbody></table></td></tr></tbody></table>
+{{/more}} {{/sections}}
+</td></tr></table><!-- // END BODY --></td></tr><tr><td align="center" valign="top"><!-- BEGIN FOOTER // --><table border="0" cellpadding="0" cellspacing="0" width="680" id="templateFooter" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;border-top: 0;border-bottom: 0;"><tr><td valign="top" class="footerContainer" style="padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><tbody class="mcnImageBlockOuter"><tr><td valign="top" style="padding: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnImageBlockInner"><table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><tbody><tr><td class="mcnImageContent" valign="top" style="padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;text-align: center;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a href="{{paypal}}" title="" class="" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img align="center" alt="paypal" src="http://gallery.mailchimp.com/3a732f7f40904b46c4bad21a9/images/9064c503-284e-4356-b2d0-aa4c10405bdc.png" width="260" style="max-width: 260px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage"></a></td></tr></tbody></table></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><tbody class="mcnFollowBlockOuter"><tr><td align="center" valign="top" style="padding: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnFollowBlockInner"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowContentContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><tbody><tr><td align="center" style="padding-left: 9px;padding-right: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowContent" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><tbody><tr><td align="center" valign="top" style="padding-top: 9px;padding-right: 9px;padding-left: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><tbody><tr><td valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnFollowStacked" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><tbody><tr><td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a href="{{facebook}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-96.png" alt="Facebook" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a></td></tr><tr><td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a href="{{facebook}}" target="_blank" style="color: #606060;font-family: Verdana, Geneva, sans-serif;font-size: 11px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Facebook</a></td></tr></tbody></table><!--[if gte mso 6]></td><td align="left" valign="top"><![endif]--><table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnFollowStacked" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><tbody><tr><td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a href="{{twitter}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-96.png" alt="Twitter" class="mcnFollowBlockIcon" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a></td></tr><tr><td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a href="{{twitter}}" target="_blank" style="color: #606060;font-family: Verdana, Geneva, sans-serif;font-size: 11px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Twitter</a></td></tr></tbody></table><!--[if gte mso 6]></td><td align="left" valign="top"><![endif]--><table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnFollowStacked" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><tbody><tr><td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a href="{{apple}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://gallery.mailchimp.com/3a732f7f40904b46c4bad21a9/images/d75e1374-02b9-4113-ac77-575626fd36d6.png" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a></td></tr><tr><td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 10px;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a href="{{apple}}" target="_blank" style="color: #606060;font-family: Verdana, Geneva, sans-serif;font-size: 11px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">App Store</a></td></tr></tbody></table><!--[if gte mso 6]></td><td align="left" valign="top"><![endif]--><table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnFollowStacked" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><tbody><tr><td align="center" valign="top" class="mcnFollowIconContent" style="padding-right: 0;padding-bottom: 5px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a href="{{android}}" target="_blank" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="http://gallery.mailchimp.com/3a732f7f40904b46c4bad21a9/images/a36ea080-b862-4be2-9a7b-ec6d1b26e1f0.png" width="48" style="width: 48px;max-width: 48px;display: block;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a></td></tr><tr><td align="center" valign="top" class="mcnFollowTextContent" style="padding-right: 0;padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a href="{{android}}" target="_blank" style="color: #606060;font-family: Verdana, Geneva, sans-serif;font-size: 11px;font-weight: normal;line-height: 100%;text-align: center;text-decoration: none;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Play Store</a></td></tr></tbody></table><!--[if gte mso 6]></td><td align="left" valign="top"><![endif]--></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><tbody class="mcnTextBlockOuter"><tr><td valign="top" class="mcnTextBlockInner" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table align="left" border="0" cellpadding="0" cellspacing="0" width="680" class="mcnTextContentContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><tbody><tr><td valign="top" class="mcnTextContent" style="padding: 9px 18px;color: #CCCCCC;font-family: Tahoma, Verdana, Segoe, sans-serif;font-size: 9px;font-weight: normal;line-height: 100%;text-align: center;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><table cellpadding="0" cellspacing="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><tbody><tr><td class="td1" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><p class="p1" style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 125%;">eBay International AG sent this e-mail to you because your Notification Preferences&nbsp;indicate that you want to receive information about Special Promotions, Offers and Events.&nbsp;All items are subject to availability. Prices are correct at time of publication but are subject to change without prior notice.&nbsp;</p><p class="p1" style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 125%;">If you do not wish to receive the eBay Deals Alert email, please click <a href="{{unsubscribe}}" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-weight: normal;text-decoration: underline;">here</a> to unsubscribe or sign into "My eBay" by clicking on the "My eBay" link found at the top of the eBay home page and change your Notification Preferences.&nbsp;</p><p class="p1" style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 125%;">Please note that it may take up to 10 days to process your request.&nbsp;</p><p class="p1" style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 125%;">Visit our <a href="{{privacy}}" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-weight: normal;text-decoration: underline;">Privacy Policy</a> and <a href="{{agreement}}" style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-weight: normal;text-decoration: underline;">User Agreement</a> if you have any questions.&nbsp;</p><p class="p1" style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 125%;">Copyright © 2014 eBay Inc. All Rights Reserved.&nbsp;</p><p class="p1" style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 125%;">Designated trademarks and brands are the property of their respective owners.&nbsp;</p><p class="p1" style="text-align: center;margin: 1em 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 125%;">eBay and the eBay logo are trademarks of eBay Inc.</p></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></table><!-- // END FOOTER --></td></tr></table><!-- // END TEMPLATE --></td></tr></table></center></body></html>

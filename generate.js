@@ -49,23 +49,6 @@ var countries = {
     }
 };
 
-edm.map = _.map(edm.map, function(button) {
-    // button.big = _.map(button.origin, function(e) {
-    //     return Math.floor(e * 644 / 680)
-    // }).join(',');
-    button.big = button.origin.join(',');
-
-    button.small = _.map(button.origin, function(e) {
-        return Math.floor(e * 460 / 680)
-    }).join(',');
-
-    button.smaller = _.map(button.origin, function(e) {
-        return Math.floor(e * 380 / 680)
-    }).join(',');
-
-    return button;
-});
-
 edm = _.extend(edm, countries[edm.country]);
 edm.sections = _.map(sections, function(section) {
     section.products = _.where(products, {
@@ -75,7 +58,14 @@ edm.sections = _.map(sections, function(section) {
     return section;
 });
 
-if (edm.banner) edm.banner = edm.images + edm.banner;
+if (edm.banner) {
+    edm.map = require('./' + id + '/banner.json');
+    edm.map = _.map(edm.map, function(button) {
+        button.src = edm.images + button.src;
+        return button;
+    });
+}
+
 if (edm.limited) edm.limited = edm.images + edm.limited;
 
 _.each(edm.sections, function(section) {
